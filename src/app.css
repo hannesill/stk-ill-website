@@ -1,3 +1,50 @@
 @import 'tailwindcss/base';
 @import 'tailwindcss/components';
 @import 'tailwindcss/utilities';
+
+/* Smooth Scrolling */
+html {
+  scroll-behavior: smooth;
+}
+
+/* Custom Animations */
+@keyframes float {
+  0% { transform: translateY(0px); }
+  50% { transform: translateY(-10px); }
+  100% { transform: translateY(0px); }
+}
+
+.animate-float {
+  animation: float 6s ease-in-out infinite;
+}
+
+/* Hide scrollbar while keeping functionality */
+::-webkit-scrollbar {
+  display: none;
+}
+
+/* For Firefox */
+* {
+  scrollbar-width: none;
+}
+
+/* Smooth transitions for all interactive elements */
+a, button {
+  transition: all 0.3s ease;
+}
+
+/* Modern selection color */
+::selection {
+  background: theme('colors.secondary.DEFAULT');
+  color: white;
+}
+
+/* Default cursor for text */
+p, h1, h2, h3, h4, h5, h6, span, blockquote {
+  cursor: default;
+}
+
+/* Keep pointer cursor for interactive elements */
+a, button, [role="button"] {
+  cursor: pointer;
+}
