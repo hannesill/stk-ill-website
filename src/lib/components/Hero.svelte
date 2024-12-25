@@ -4,16 +4,16 @@
 
   const images = [
     {
-      src: "/images/heros/hero-image.jpg",
-      alt: "Steuerkanzlei Ill Büro"
+      src: "/images/heros/hero-digital_bei_mandant.jpg",
+      alt: "Digitale Steuerberatung direkt beim Mandanten in der Fabrik"
     },
     {
-      src: "/images/services/Steuerberatung-Bodensee.jpg",
-      alt: "Digitale Steuerberatung"
+      src: "/images/heros/hero-beratung.jpg",
+      alt: "Steuerberatung in der Kanzlei am Bodensee"
     },
     {
-      src: "/images/services/Rechnung-einscannen-digital.jpg",
-      alt: "Moderne Buchhaltung"
+      src: "/images/heros/hero-rechnung_digital_einscannen.jpg",
+      alt: "Moderne Buchhaltung mit Einscannen der Rechnungen"
     }
   ];
 
