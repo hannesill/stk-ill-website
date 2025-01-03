@@ -1,5 +1,7 @@
 <script lang="ts">
   import { fadeIn } from '$lib/actions/animate';
+  import CallToAction from '$lib/components/CallToAction.svelte';
+  import BigImageCard from '$lib/components/BigImageCard.svelte';
   
   const services = [
     {
@@ -113,73 +115,31 @@
     </p>
 
     <div class="space-y-24">
-      {#each services as service, i}
-        <div 
-          class="bg-white rounded-lg shadow-md hover:shadow-xl transition-all duration-500 group"
-          use:fadeIn={{ delay: i * 200 }}
+      {#each services as service}
+        <BigImageCard
+          title={service.title}
+          titleMd={service.titleMd}
+          image={service.image}
+          alt={service.alt}
         >
-          <div class="grid md:grid-cols-2 gap-8">
-            <!-- Image Section -->
-            <div class="order-2 md:order-1 md:h-full">
-              <div class="overflow-hidden rounded-b-lg md:rounded-none md:rounded-l-lg h-64 md:h-full">
-                <img 
-                  src={service.image} 
-                  alt={service.alt}
-                  class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
-                >
-              </div>
-            </div>
-
-            <!-- Content Section -->
-            <div class="p-8 order-1 md:order-2">
-              <h2 class="text-3xl font-bold mb-4 text-gray-900">
-                <span class="md:hidden lg:inline">{service.title}</span>
-                <span class="hidden md:inline lg:hidden whitespace-pre-line">{service.titleMd || service.title}</span>
-              </h2>
-              <p class="text-gray-600 mb-6 text-lg">
-                {service.description}
-              </p>
-              
-              <ul class="space-y-3">
-                {#each service.features as feature}
-                  <li class="flex items-start group-hover:translate-x-2 transition-all duration-300">
-                    <svg class="w-6 h-6 text-secondary flex-shrink-0 mr-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
-                    </svg>
-                    <span>{feature}</span>
-                  </li>
-                {/each}
-              </ul>
-            </div>
-          </div>
-        </div>
+          <p class="text-gray-600 mb-6 text-lg">
+            {service.description}
+          </p>
+          
+          <ul class="space-y-3">
+            {#each service.features as feature}
+              <li class="flex items-start group-hover:translate-x-2 transition-all duration-300">
+                <svg class="w-6 h-6 text-secondary flex-shrink-0 mr-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
+                </svg>
+                <span>{feature}</span>
+              </li>
+            {/each}
+          </ul>
+        </BigImageCard>
       {/each}
     </div>
   </div>
 </section>
 
-<!-- Call to Action -->
-<section class="py-16 bg-primary">
-  <div class="container mx-auto px-4 text-center">
-    <h2 class="text-3xl font-bold text-white mb-6">
-      Bereit für den digitalen Wandel?
-    </h2>
-    <p class="text-white/90 text-lg mb-8 max-w-2xl mx-auto">
-      Vereinbaren Sie ein kostenloses Erstgespräch und erfahren Sie, wie wir Ihre Prozesse digitalisieren und optimieren können.
-    </p>
-    <div class="flex flex-col sm:flex-row gap-4 justify-center">
-      <a 
-        href="/kontakt" 
-        class="bg-white text-primary px-8 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-colors"
-      >
-        Kontakt aufnehmen
-      </a>
-      <a 
-        href="tel:+497773920967" 
-        class="border-2 border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white/10 transition-colors"
-      >
-        07773 920967
-      </a>
-    </div>
-  </div>
-</section> 
+<CallToAction />

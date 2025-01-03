@@ -22,12 +22,15 @@
         </ul>
       </div>
 
-      <div>
-        <h3 class="text-white font-bold mb-4">Rechtliches</h3>
+      <div class="space-y-4">
+        <h3 class="text-white font-semibold mb-4">Rechtliches</h3>
         <ul class="space-y-2">
-          <li><a href="/impressum" class="hover:text-white">Impressum</a></li>
-          <li><a href="/datenschutz" class="hover:text-white">Datenschutz</a></li>
-          <li><a href="/agb" class="hover:text-white">AGB</a></li>
+          <li>
+            <a href="/impressum" class="hover:text-primary transition-colors">Impressum</a>
+          </li>
+          <li>
+            <a href="/datenschutz" class="hover:text-primary transition-colors">Datenschutz</a>
+          </li>
         </ul>
       </div>
 
