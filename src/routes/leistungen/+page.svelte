@@ -2,6 +2,7 @@
   import { fadeIn } from '$lib/actions/animate';
   import CallToAction from '$lib/components/CallToAction.svelte';
   import BigImageCard from '$lib/components/BigImageCard.svelte';
+  import { base } from '$app/paths';
   
   const services = [
     {
@@ -15,7 +16,7 @@
         'Digitale Kommunikation und Dokumentenverwaltung',
         'Steueroptimierung durch vorausschauende Planung'
       ],
-      image: '/images/services/Steuerberatung-Bodensee.jpg',
+      image: `${base}/images/services/Steuerberatung-Bodensee.jpg`,
       alt: 'Digitale Steuerberatung am Bodensee'
     },
     {
@@ -29,7 +30,7 @@
         'Zeitnahe BWA und Auswertungen',
         'Integration bestehender Systeme'
       ],
-      image: '/images/services/Rechnung-einscannen-digital.jpg',
+      image: `${base}/images/services/Rechnung-einscannen-digital.jpg`,
       alt: 'Digitale Buchhaltung und Belegerfassung'
     },
     {
@@ -43,7 +44,7 @@
         'Entwicklung von Optimierungsstrategien',
         'Beratung zu Bilanzierungsfragen'
       ],
-      image: '/images/services/Digitale-Steuerkanzlei-iPad.jpg',
+      image: `${base}/images/services/Digitale-Steuerkanzlei-iPad.jpg`,
       alt: 'Digitaler Jahresabschluss'
     },
     {
@@ -57,7 +58,7 @@
         'Sozialversicherungsmeldungen',
         'Betriebliche Altersvorsorge'
       ],
-      image: '/images/services/Steuerberatung-Video-Call.jpg',
+      image: `${base}/images/services/Steuerberatung-Video-Call.jpg`,
       alt: 'Digitale Lohnbuchhaltung'
     },
     {
@@ -72,7 +73,7 @@
         'Digitale Prozessoptimierung',
         'Unternehmensnachfolge'
       ],
-      image: '/images/services/Steuerberatung-Vermögensaufbau.jpg',
+      image: `${base}/images/services/Steuerberatung-Vermögensaufbau.jpg`,
       alt: 'Unternehmensberatung am Bodensee'
     },
     {
@@ -86,7 +87,7 @@
         'Unterstützung bei Förderanträgen',
         'Digitale Prozessplanung von Anfang an'
       ],
-      image: '/images/services/Digitale-Steuerberaterin.jpg',
+      image: `${base}/images/services/Digitale-Steuerberaterin.jpg`,
       alt: 'Existenzgründungsberatung'
     }
   ];

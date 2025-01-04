@@ -3,10 +3,11 @@
   import Hero, { type HeroImage, type HeroContent } from "$lib/components/Hero.svelte";
   import CallToAction from "$lib/components/CallToAction.svelte";
   import Card from "$lib/components/Card.svelte";
+  import { base } from '$app/paths';
 
   const heroImages: HeroImage[] = [
     {
-      src: "/images/Steuerkanzlei-Ill-Partner-Anwalt.jpg",
+      src: `${base}/images/Steuerkanzlei-Ill-Partner-Anwalt.jpg`,
       alt: "Digitale Steuerberatung direkt beim Mandanten in der Fabrik"
     },
   ];
@@ -21,23 +22,23 @@
   const certificates = [
     {
       year: "2024",
-      image: "/images/certificates/DATEV_Digitale_Kanzlei_2024.png"
+      image: `${base}/images/certificates/DATEV_Digitale_Kanzlei_2024.png`
     },
     {
       year: "2023",
-      image: "/images/certificates/DATEV_Digitale_Kanzlei_2023.png"
+      image: `${base}/images/certificates/DATEV_Digitale_Kanzlei_2023.png`
     },
     {
       year: "2022",
-      image: "/images/certificates/DATEV_Digitale_Kanzlei_2022.png"
+      image: `${base}/images/certificates/DATEV_Digitale_Kanzlei_2022.png`
     },
     {
       year: "2021",
-      image: "/images/certificates/DATEV_Digitale_Kanzlei_2021.png"
+      image: `${base}/images/certificates/DATEV_Digitale_Kanzlei_2021.png`
     },
     {
       year: "2020",
-      image: "/images/certificates/DATEV_Digitale_Kanzlei_2020.png"
+      image: `${base}/images/certificates/DATEV_Digitale_Kanzlei_2020.png`
     }
   ];
 </script>
@@ -92,7 +93,7 @@
         use:fadeIn={{ delay: 200 }}
       >
         <img 
-          src="/images/Steuerkanzlei-Bodensee-Bankengespraech.jpg" 
+          src={`${base}/images/Steuerkanzlei-Bodensee-Bankengespraech.jpg`}
           alt="Ursula Ill - Ihre Steuerberaterin in Stockach"
           class="w-full h-full object-cover"
         >
@@ -140,7 +141,7 @@
       >
         <div class="w-32 h-32">
           <img 
-            src="/images/certificates/DATEV_Mitglied.png"
+            src={`${base}/images/certificates/DATEV_Mitglied.png`}
             alt="DATEV Mitglied Zertifikat"
             class="w-full h-full object-contain transition-transform duration-300 group-hover:scale-105"
           >

@@ -1,6 +1,7 @@
 <script lang="ts">
   import { fade, slide } from 'svelte/transition';
   import { onMount } from 'svelte';
+  import { base } from '$app/paths';
 
   const navItems = [
     { title: 'Startseite', href: '/' },
@@ -43,7 +44,7 @@
   <div class="container mx-auto px-4">
     <nav class="flex items-center justify-between h-20">
       <a href="/" class="flex items-center z-20">
-        <img src="/logo.png" alt="Steuerkanzlei Ill Logo" class="h-16 p-3 w-auto">
+        <img src="{base}/logo.png" alt="Steuerkanzlei Ill Logo" class="h-16 p-3 w-auto">
       </a>
       
       <!-- Desktop Menu -->

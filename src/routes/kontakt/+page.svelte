@@ -2,10 +2,11 @@
   import { fadeIn } from '$lib/actions/animate';
   import Hero, { type HeroImage, type HeroContent } from "$lib/components/Hero.svelte";
   import ContactCard from "$lib/components/ContactCard.svelte";
+  import { base } from '$app/paths';
 
   const heroImages: HeroImage[] = [
     {
-      src: "/images/heros/hero-beratung.jpg",
+      src: `${base}/images/heros/hero-beratung.jpg`,
       alt: "Steuerberatung in der Kanzlei am Bodensee"
     }
   ];

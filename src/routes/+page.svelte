@@ -6,18 +6,19 @@
   import CallToAction from "$lib/components/CallToAction.svelte";
   import { browser } from '$app/environment';
   import { onMount } from 'svelte';
+  import { base } from '$app/paths';
 
   const heroImages: HeroImage[] = [
     {
-      src: "/images/heros/hero-digital_bei_mandant.jpg",
+      src: `${base}/images/heros/hero-digital_bei_mandant.jpg`,
       alt: "Digitale Steuerberatung direkt beim Mandanten in der Fabrik"
     },
     {
-      src: "/images/heros/hero-beratung.jpg",
+      src: `${base}/images/heros/hero-beratung.jpg`,
       alt: "Steuerberatung in der Kanzlei am Bodensee"
     },
     {
-      src: "/images/heros/hero-rechnung_digital_einscannen.jpg",
+      src: `${base}/images/heros/hero-rechnung_digital_einscannen.jpg`,
       alt: "Moderne Buchhaltung mit Einscannen der Rechnungen"
     }
   ];

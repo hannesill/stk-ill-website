@@ -3,14 +3,15 @@
   import Hero, { type HeroImage, type HeroContent } from "$lib/components/Hero.svelte";
   import Card from "$lib/components/Card.svelte";
   import BigImageCard from "$lib/components/BigImageCard.svelte";
+  import { base } from '$app/paths';
 
   const heroImages: HeroImage[] = [
     {
-      src: "/images/Steuerkanzlei-Bodensee-Team.jpg",
+      src: `${base}/images/Steuerkanzlei-Bodensee-Team.jpg`,
       alt: "Karriere in der Steuerkanzlei am Bodensee"
     },
     {
-      src: "/images/Steuerkanzlei-Bodensee-Aussicht.jpg",
+      src: `${base}/images/Steuerkanzlei-Bodensee-Aussicht.jpg`,
       alt: "Aussicht auf den Bodensee aus der Steuerkanzlei"
     }
   ];
@@ -73,7 +74,7 @@
         "Unternehmercoaching unterstützen",
         "Kunden beraten"
       ],
-      image: "/images/Steuerberatung-mit-Anwalt.jpg"
+      image: `${base}/images/Steuerberatung-mit-Anwalt.jpg`
     },
     {
       title: "Bilanzbuchhaltungskraft (m/w/d)",
@@ -91,7 +92,7 @@
         "Controlling erstellen",
         "Bedarfsanalysen anfertigen"
       ],
-      image: "/images/services/Steuerberatung-Video-Call.jpg"
+      image: `${base}/images/services/Steuerberatung-Video-Call.jpg`
     }
   ];
 </script>

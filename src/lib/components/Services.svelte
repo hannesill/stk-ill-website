@@ -43,42 +43,43 @@
 
 <script>
   import { fadeIn } from '$lib/actions/animate';
+  import { base } from '$app/paths';
   const services = [
     {
       title: "Steuerberatung",
       description: "Kompetente Beratung in allen steuerlichen Angelegenheiten.",
       href: "/leistungen/steuerberatung",
-      image: "/images/services/Steuerberatung-Bodensee.jpg"
+      image: `${base}/images/services/Steuerberatung-Bodensee.jpg`
     },
     {
       title: "Unternehmensberatung",
       description: "Strategische Beratung für nachhaltigen Unternehmenserfolg.",
       href: "/leistungen/unternehmensberatung",
-      image: "/images/services/Steuerberatung-Vermögensaufbau.jpg"
+      image: `${base}/images/services/Steuerberatung-Vermögensaufbau.jpg`
     },
     {
       title: "Digitale Buchhaltung",
       description: "Moderne Buchführung mit digitaler Belegerfassung und automatisierten Prozessen.",
       href: "/leistungen/digitale-buchhaltung",
-      image: "/images/services/Rechnung-einscannen-digital.jpg"
+      image: `${base}/images/services/Rechnung-einscannen-digital.jpg`
     },
     {
       title: "Lohn- und Gehaltsabrechnung",
       description: "Zuverlässige Lohnbuchhaltung und Personalverwaltung.",
       href: "/leistungen/lohnbuchhaltung",
-      image: "/images/services/Steuerberatung-Video-Call.jpg"
+      image: `${base}/images/services/Steuerberatung-Video-Call.jpg`
     },
     {
       title: "Jahresabschluss",
       description: "Professionelle Erstellung von Jahresabschlüssen für Unternehmen jeder Größe.",
       href: "/leistungen/jahresabschluss",
-      image: "/images/services/Digitale-Steuerkanzlei-iPad.jpg"
+      image: `${base}/images/services/Digitale-Steuerkanzlei-iPad.jpg`
     },
     {
       title: "Existenzgründung",
       description: "Begleitung von der Geschäftsidee bis zur erfolgreichen Umsetzung.",
       href: "/leistungen/existenzgruendung",
-      image: "/images/services/Digitale-Steuerberaterin.jpg"
+      image: `${base}/images/services/Digitale-Steuerberaterin.jpg`
     }
   ];
 </script> 
