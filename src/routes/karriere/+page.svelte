@@ -3,6 +3,7 @@
   import Hero, { type HeroImage, type HeroContent } from "$lib/components/Hero.svelte";
   import Card from "$lib/components/Card.svelte";
   import BigImageCard from "$lib/components/BigImageCard.svelte";
+  import CallToAction, { type CTAContent } from "$lib/components/CallToAction.svelte";
   import { base } from '$app/paths';
 
   const heroImages: HeroImage[] = [
@@ -95,6 +96,19 @@
       image: `${base}/images/services/Steuerberatung-Video-Call.jpg`
     }
   ];
+
+  const applyCTAContent: CTAContent = {
+    title: "Bereit für den nächsten Karriereschritt?",
+    description: "Wir freuen uns auf Deine Bewerbung! Sende uns deine Unterlagen oder vereinbare ein unverbindliches Kennenlerngespräch.",
+    primaryButton: {
+      text: "Jetzt bewerben",
+      href: `${base}/kontakt`
+    },
+    secondaryButton: {
+      text: "07773 920967",
+      href: "tel:+497773920967"
+    }
+  };
 </script>
 
 <svelte:head>
@@ -188,7 +202,7 @@
             </div>
 
             <a 
-              href="/kontakt" 
+              href={`${base}/kontakt`}
               class="inline-block bg-primary text-white px-8 py-3 rounded-lg font-semibold hover:bg-primary-dark transition-all duration-300 hover:scale-105"
             >
               Jetzt bewerben
@@ -200,29 +214,4 @@
   </div>
 </section>
 
-<!-- CTA Section -->
-<section class="py-16 bg-primary text-white">
-  <div class="container mx-auto px-4 text-center">
-    <h2 class="text-3xl font-bold mb-6">
-      Bereit für den nächsten Karriereschritt?
-    </h2>
-    <p class="text-lg mb-8 max-w-2xl mx-auto opacity-90">
-      Wir freuen uns auf Ihre Bewerbung! Senden Sie uns Ihre Unterlagen oder vereinbaren Sie ein 
-      unverbindliches Kennenlerngespräch.
-    </p>
-    <div class="flex flex-col sm:flex-row gap-4 justify-center">
-      <a 
-        href="/kontakt" 
-        class="bg-white text-primary px-8 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-colors"
-      >
-        Jetzt bewerben
-      </a>
-      <a 
-        href="tel:+497773920967" 
-        class="border-2 border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white/10 transition-colors"
-      >
-        07773 920967
-      </a>
-    </div>
-  </div>
-</section> 
+<CallToAction content={applyCTAContent} />

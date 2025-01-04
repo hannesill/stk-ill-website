@@ -26,10 +26,10 @@
         <h3 class="text-white font-semibold mb-4">Rechtliches</h3>
         <ul class="space-y-2">
           <li>
-            <a href="/impressum" class="hover:text-primary transition-colors">Impressum</a>
+            <a href={`${base}/impressum`} class="hover:text-primary transition-colors">Impressum</a>
           </li>
           <li>
-            <a href="/datenschutz" class="hover:text-primary transition-colors">Datenschutz</a>
+            <a href={`${base}/datenschutz`} class="hover:text-primary transition-colors">Datenschutz</a>
           </li>
         </ul>
       </div>
@@ -45,3 +45,7 @@
     </div>
   </div>
 </footer> 
+
+<script lang="ts">
+  import { base } from '$app/paths';
+</script>

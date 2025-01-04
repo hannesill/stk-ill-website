@@ -48,37 +48,37 @@
     {
       title: "Steuerberatung",
       description: "Kompetente Beratung in allen steuerlichen Angelegenheiten.",
-      href: "/leistungen/steuerberatung",
+      href: `${base}/leistungen#steuerberatung`,
       image: `${base}/images/services/Steuerberatung-Bodensee.jpg`
     },
     {
       title: "Unternehmensberatung",
       description: "Strategische Beratung für nachhaltigen Unternehmenserfolg.",
-      href: "/leistungen/unternehmensberatung",
+      href: `${base}/leistungen#unternehmensberatung`,
       image: `${base}/images/services/Steuerberatung-Vermögensaufbau.jpg`
     },
     {
       title: "Digitale Buchhaltung",
       description: "Moderne Buchführung mit digitaler Belegerfassung und automatisierten Prozessen.",
-      href: "/leistungen/digitale-buchhaltung",
+      href: `${base}/leistungen#digitale-buchhaltung`,
       image: `${base}/images/services/Rechnung-einscannen-digital.jpg`
     },
     {
       title: "Lohn- und Gehaltsabrechnung",
       description: "Zuverlässige Lohnbuchhaltung und Personalverwaltung.",
-      href: "/leistungen/lohnbuchhaltung",
+      href: `${base}/leistungen#lohnbuchhaltung`,
       image: `${base}/images/services/Steuerberatung-Video-Call.jpg`
     },
     {
       title: "Jahresabschluss",
       description: "Professionelle Erstellung von Jahresabschlüssen für Unternehmen jeder Größe.",
-      href: "/leistungen/jahresabschluss",
+      href: `${base}/leistungen#jahresabschluss`,
       image: `${base}/images/services/Digitale-Steuerkanzlei-iPad.jpg`
     },
     {
       title: "Existenzgründung",
       description: "Begleitung von der Geschäftsidee bis zur erfolgreichen Umsetzung.",
-      href: "/leistungen/existenzgruendung",
+      href: `${base}/leistungen#existenzgruendung`,
       image: `${base}/images/services/Digitale-Steuerberaterin.jpg`
     }
   ];

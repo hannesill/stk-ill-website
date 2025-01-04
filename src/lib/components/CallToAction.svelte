@@ -14,12 +14,13 @@
 </script>
 
 <script lang="ts">
+  import { base } from '$app/paths';
   const defaultContent: CTAContent = {
     title: "Bereit für den nächsten Schritt?",
     description: "Vereinbaren Sie ein kostenloses Erstgespräch und erfahren Sie, wie wir Ihre steuerlichen Angelegenheiten optimieren können.",
     primaryButton: {
       text: "Kontakt aufnehmen",
-      href: "/kontakt"
+      href: `${base}/kontakt`
     },
     secondaryButton: {
       text: "07773 920967",

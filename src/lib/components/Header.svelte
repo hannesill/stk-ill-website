@@ -4,11 +4,11 @@
   import { base } from '$app/paths';
 
   const navItems = [
-    { title: 'Startseite', href: '/' },
-    { title: 'Leistungen', href: '/leistungen' },
-    { title: 'Über uns', href: '/ueber-uns' },
-    { title: 'Karriere', href: '/karriere' },
-    { title: 'Kontakt', href: '/kontakt' }
+    { title: 'Startseite', href: `${base}/` },
+    { title: 'Leistungen', href: `${base}/leistungen` },
+    { title: 'Über uns', href: `${base}/ueber-uns` },
+    { title: 'Karriere', href: `${base}/karriere` },
+    { title: 'Kontakt', href: `${base}/kontakt` }
   ];
 
   let isMenuOpen = false;
@@ -79,7 +79,7 @@
 
       <button 
         class="hidden lg:block bg-primary text-white px-6 py-2 rounded-lg hover:bg-primary-dark transition-colors"
-        on:click={() => window.location.href = '/kontakt'}
+        on:click={() => window.location.href = `${base}/kontakt`}
         >
         Termin vereinbaren
       </button>
