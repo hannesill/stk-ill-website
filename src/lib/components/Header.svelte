@@ -76,7 +76,10 @@
         </div>
       </button>
 
-      <button class="hidden lg:block bg-primary text-white px-6 py-2 rounded-lg hover:bg-primary-dark transition-colors">
+      <button 
+        class="hidden lg:block bg-primary text-white px-6 py-2 rounded-lg hover:bg-primary-dark transition-colors"
+        on:click={() => window.location.href = '/kontakt'}
+        >
         Termin vereinbaren
       </button>
 
