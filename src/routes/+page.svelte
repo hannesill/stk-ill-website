@@ -27,7 +27,7 @@
     title: "Digitale Steuerkanzlei",
     subtitle: 'Für Personen & Unternehmen in <span class="font-bold">Stockach, Singen, Radolfzell und Umgebung</span>, die neue Wege gehen wollen: Weniger Kosten und mehr Zeit fürs Wesentliche durch digitale Prozesse.',
     buttonText: "Jetzt unverbindliches Erstgespräch vereinbaren",
-    buttonLink: "/kontakt"
+    buttonLink: `${base}/kontakt`
   };
 
   onMount(() => {
