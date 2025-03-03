@@ -14,7 +14,14 @@
   const heroContent: HeroContent = {
     title: "Kontakt",
     subtitle: "Wir freuen uns darauf, Sie kennenzulernen. Kontaktieren Sie uns für ein unverbindliches Erstgespräch.",
+    underlineWidth: "w-[100%]"
   };
+
+  let mapsLoaded = false;
+  
+  function loadMaps() {
+    mapsLoaded = true;
+  }
 </script>
 
 <svelte:head>
@@ -80,17 +87,48 @@
 <section class="py-16 bg-gray-50">
   <div class="container mx-auto px-4">
     <div class="mx-auto">
-      <iframe
-        title="Kanzleistandort"
-        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d172958.38473962524!2d9.025899776891561!3d47.37698710898837!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x479af51689e7c96f%3A0x4a47a8d989c0a0eb!2sOberhof%2021%2C%2078351%20Bodman-Ludwigshafen!5e0!3m2!1sde!2sde!4v1709667547943!5m2!1sde!2sde"
-        width="100%"
-        height="650"
-        style="border:0;"
-        allowfullscreen={true}
-        loading="lazy"
-        referrerpolicy="no-referrer-when-downgrade"
-        class="rounded-lg shadow-md"
-      ></iframe>
+      {#if !mapsLoaded}
+        <div class="rounded-lg shadow-md bg-white p-8 text-center h-[650px] flex flex-col items-center justify-center">
+          <svg class="w-16 h-16 text-primary mb-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z" />
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" />
+          </svg>
+          <h3 class="text-2xl font-semibold mb-4">Kanzleistandort anzeigen</h3>
+          <p class="mb-6 max-w-lg">
+            Um Ihnen unseren Standort anzuzeigen, laden wir Google Maps. 
+            Dabei werden Cookies gesetzt und Daten an Google übertragen.
+          </p>
+          <button 
+            on:click={loadMaps}
+            class="px-6 py-3 bg-primary text-white rounded-lg hover:bg-primary-dark transition-colors"
+          >
+            Google Maps laden
+          </button>
+          <p class="mt-4 text-sm text-gray-500">
+            Alternativ finden Sie uns unter: Oberhof 21, 78351 Bodman-Ludwigshafen
+          </p>
+          <a 
+            href="https://maps.google.com/?q=Oberhof+21,+78351+Bodman-Ludwigshafen" 
+            target="_blank"
+            rel="noopener noreferrer"
+            class="mt-2 text-primary hover:underline"
+          >
+            Direkt zu Google Maps
+          </a>
+        </div>
+      {:else}
+        <iframe
+          title="Kanzleistandort"
+          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d172958.38473962524!2d9.025899776891561!3d47.37698710898837!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x479af51689e7c96f%3A0x4a47a8d989c0a0eb!2sOberhof%2021%2C%2078351%20Bodman-Ludwigshafen!5e0!3m2!1sde!2sde!4v1709667547943!5m2!1sde!2sde"
+          width="100%"
+          height="650"
+          style="border:0;"
+          allowfullscreen={true}
+          loading="lazy"
+          referrerpolicy="no-referrer-when-downgrade"
+          class="rounded-lg shadow-md"
+        ></iframe>
+      {/if}
     </div>
   </div>
 </section> 

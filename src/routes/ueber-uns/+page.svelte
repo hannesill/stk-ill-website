@@ -16,31 +16,9 @@
     title: "Über uns",
     subtitle: 'Wir sind eine digitale Steuerberatung in Stockach, Singen und Radolfzell, die Ihnen neue Wege in der Steuerberatung und Buchhaltung eröffnet.',
     buttonText: "Jetzt unverbindliches Erstgespräch vereinbaren",
-    buttonLink: `${base}/kontakt`
+    buttonLink: `${base}/kontakt`,
+    underlineWidth: "w-[55%]"
   };
-
-  const certificates = [
-    {
-      year: "2024",
-      image: `${base}/images/certificates/DATEV_Digitale_Kanzlei_2024.png`
-    },
-    {
-      year: "2023",
-      image: `${base}/images/certificates/DATEV_Digitale_Kanzlei_2023.png`
-    },
-    {
-      year: "2022",
-      image: `${base}/images/certificates/DATEV_Digitale_Kanzlei_2022.png`
-    },
-    {
-      year: "2021",
-      image: `${base}/images/certificates/DATEV_Digitale_Kanzlei_2021.png`
-    },
-    {
-      year: "2020",
-      image: `${base}/images/certificates/DATEV_Digitale_Kanzlei_2020.png`
-    }
-  ];
 </script>
 
 <svelte:head>
@@ -119,34 +97,47 @@
       auf moderne, digitale Prozesse für eine effiziente Zusammenarbeit mit unseren Mandanten.
     </p>
     
-    <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-6 max-w-7xl mx-auto">
-      {#each certificates as cert, i}
-        <div 
-          class="bg-white p-4 rounded-lg shadow-md hover:shadow-xl transition-all duration-300 group flex flex-col items-center"
-          use:fadeIn={{ delay: i * 200 }}
-        >
-          <div class="w-32 h-auto">
-            <img 
-              src={cert.image}
-              alt="DATEV Digitale Kanzlei Zertifikat {cert.year}"
-              class="w-full h-full object-contain transition-transform duration-300 group-hover:scale-105"
-            >
-          </div>
-          <p class="text-center mt-4 font-semibold text-gray-600">Zertifizierung {cert.year}</p>
-        </div>
-      {/each}
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-5xl mx-auto px-4">
       <div 
-        class="bg-white p-4 rounded-lg shadow-md hover:shadow-xl transition-all duration-300 group flex flex-col items-center"
-        use:fadeIn={{ delay: 5 * 200 }}
+        class="bg-white p-6 rounded-lg shadow-md hover:shadow-xl transition-all duration-300 group flex flex-col items-center"
+        use:fadeIn={{ delay: 0 }}
       >
-        <div class="w-32 h-32">
+        <div class="w-full h-36 flex items-center justify-center">
+          <img 
+            src={`${base}/images/certificates/DATEV_Digitale_Kanzlei_2025.png`}
+            alt="DATEV Digitale Kanzlei Zertifikat 2025"
+            class="max-w-full max-h-full object-contain transition-transform duration-300 group-hover:scale-105"
+          >
+        </div>
+        <p class="text-center mt-6 font-semibold text-gray-700 text-lg">Digitale DATEV-Kanzlei seit 2019</p>
+      </div>
+      
+      <div 
+        class="bg-white p-6 rounded-lg shadow-md hover:shadow-xl transition-all duration-300 group flex flex-col items-center"
+        use:fadeIn={{ delay: 200 }}
+      >
+        <div class="w-full h-36 flex items-center justify-center">
           <img 
             src={`${base}/images/certificates/DATEV_Mitglied.png`}
             alt="DATEV Mitglied Zertifikat"
-            class="w-full h-full object-contain transition-transform duration-300 group-hover:scale-105"
+            class="max-w-full max-h-full object-contain transition-transform duration-300 group-hover:scale-105"
           >
         </div>
-        <p class="text-center mt-4 font-semibold text-gray-600">Zertifiziertes DATEV-Mitglied</p>
+        <p class="text-center mt-6 font-semibold text-gray-700 text-lg">Zertifiziertes DATEV-Mitglied</p>
+      </div>
+      
+      <div 
+        class="bg-white p-6 rounded-lg shadow-md hover:shadow-xl transition-all duration-300 group flex flex-col items-center"
+        use:fadeIn={{ delay: 400 }}
+      >
+        <div class="w-full h-36 flex items-center justify-center">
+          <img 
+            src={`${base}/images/certificates/dstv_bw_logo.jpeg`}
+            alt="Mitglied im Deutschen Steuerberaterverband"
+            class="max-w-full max-h-full object-contain transition-transform duration-300 group-hover:scale-105"
+          >
+        </div>
+        <p class="text-center mt-6 font-semibold text-gray-700 text-lg">Mitglied im Deutschen Steuerberaterverband</p>
       </div>
     </div>
   </div>

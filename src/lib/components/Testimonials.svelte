@@ -14,7 +14,7 @@
     },
     {
       quote: "Seit Jahren schätze ich die Zusammenarbeit mit meiner Steuerberaterin Ursula Ill sehr. Sie überzeugt durch Pünktlichkeit und Zuverlässigkeit in allen Angelegenheiten. Besonders beeindruckt bin ich vom nahtlosen, digitalen Workflow, der den Austausch unkompliziert und effizient gestaltet. Ihre strategische Beratung hat mir entscheidende Impulse gegeben, die mein Unternehmen im Bereich Verpackung und Versand nachhaltig vorangebracht haben. Uneingeschränkt empfehlenswert!",
-      name: "Herr Nardi",
+      name: "Daniel Nardi",
       title: "Inhaber, Nardi Business Service e.K.",
     }
   ];

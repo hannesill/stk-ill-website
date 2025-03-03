@@ -4,7 +4,7 @@
 
 <section class="py-16 bg-white">
   <div class="container mx-auto px-4">
-    <h2 class="text-3xl font-bold text-center mb-12">Ihre Vorteile</h2>
+    <h2 class="text-3xl font-bold text-center mb-12">Gute Gründe, sich für uns zu entscheiden</h2>
     
     <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
       {#each [
@@ -14,8 +14,8 @@
           icon: "M13 10V3L4 14h7v7l9-11h-7z"
         },
         {
-          title: "Zeitnahe Bearbeitung",
-          description: "Durch unsere moderne Infrastruktur gewährleisten wir schnelle Bearbeitungszeiten.",
+          title: "Up to Date",
+          description: "Durch unsere moderne Infrastruktur gewährleisten wir schnelle Bearbeitungszeiten und liefern aktuelle Zahlen.",
           icon: "M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"
         },
         {

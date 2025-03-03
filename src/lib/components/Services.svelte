@@ -10,19 +10,20 @@
     <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
       {#each services as service, i}
         <div 
-          class="bg-white rounded-lg shadow-md hover:shadow-xl transition-all duration-500 group"
+          class="bg-white rounded-lg shadow-md hover:shadow-xl transition-all duration-500 group flex flex-col overflow-hidden"
           use:fadeIn={{ delay: i * 100 }}
         >
           {#if service.image}
-            <div class="overflow-hidden rounded-t-lg">
+            <div class="overflow-hidden rounded-t-lg h-48 w-full">
               <img 
                 src={service.image} 
                 alt={service.title}
-                class="w-full h-48 object-cover object-top transition-transform duration-700 group-hover:scale-110"
+                class="w-full h-full object-cover object-[center_20%] transition-transform duration-700 group-hover:scale-110"
+                loading="lazy"
               >
             </div>
           {/if}
-          <div class="p-6">
+          <div class="p-6 flex-grow">
             <h3 class="text-xl font-semibold mb-3 text-gray-900">{service.title}</h3>
             <p class="text-gray-600 mb-4">{service.description}</p>
             <a 
@@ -44,6 +45,8 @@
 <script>
   import { fadeIn } from '$lib/actions/animate';
   import { base } from '$app/paths';
+  
+  // Fix the image URL for Unternehmensberatung to ensure proper encoding
   const services = [
     {
       title: "Steuerberatung",
@@ -55,7 +58,7 @@
       title: "Unternehmensberatung",
       description: "Strategische Beratung für nachhaltigen Unternehmenserfolg.",
       href: `${base}/leistungen#unternehmensberatung`,
-      image: `${base}/images/services/Steuerberatung-Vermögensaufbau.jpg`
+      image: `${base}/images/services/Steuerberatung-Vermoegensaufbau.jpg`
     },
     {
       title: "Digitale Buchhaltung",
@@ -82,4 +85,4 @@
       image: `${base}/images/services/Digitale-Steuerberaterin.jpg`
     }
   ];
-</script> 
+</script>

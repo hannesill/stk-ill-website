@@ -24,10 +24,11 @@
   ];
 
   const heroContent: HeroContent = {
-    title: "Digitale Steuerkanzlei",
+    title: "Digitale Steuerberatung",
     subtitle: 'Für Personen & Unternehmen in <span class="font-bold">Stockach, Singen, Radolfzell und Umgebung</span>, die neue Wege gehen wollen: Weniger Kosten und mehr Zeit fürs Wesentliche durch digitale Prozesse.',
     buttonText: "Jetzt unverbindliches Erstgespräch vereinbaren",
-    buttonLink: `${base}/kontakt`
+    buttonLink: `${base}/kontakt`,
+    underlineWidth: "w-[32%]"
   };
 
   onMount(() => {

@@ -10,10 +10,6 @@
     {
       src: `${base}/images/Steuerkanzlei-Bodensee-Team.jpg`,
       alt: "Karriere in der Steuerkanzlei am Bodensee"
-    },
-    {
-      src: `${base}/images/Steuerkanzlei-Bodensee-Aussicht.jpg`,
-      alt: "Aussicht auf den Bodensee aus der Steuerkanzlei"
     }
   ];
 
@@ -21,13 +17,14 @@
     title: "Karriere bei uns",
     subtitle: "Werden Sie Teil unseres Teams in einer der modernsten Steuerkanzleien am Bodensee. Wir bieten Ihnen einen attraktiven Arbeitsplatz mit Seeblick und digitalen Prozessen.",
     buttonText: "Jetzt bewerben",
-    buttonLink: "#jobs"
+    buttonLink: "#jobs",
+    underlineWidth: "w-[52%]"
   };
 
   const benefits = [
     {
       title: "Flexible Arbeitszeiten",
-      description: "Wir bieten flexible Arbeitszeiten und die Möglichkeit zum Homeoffice für eine optimale Work-Life-Balance.",
+      description: "Wir bieten flexible Arbeitszeiten und Homeoffice für maximale persönliche Gestaltungsfreiheit.",
       icon: "M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"
     },
     {

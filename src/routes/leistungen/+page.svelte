@@ -20,6 +20,21 @@
       alt: 'Digitale Steuerberatung am Bodensee'
     },
     {
+      id: 'unternehmensberatung',
+      title: 'Unternehmensberatung',
+      titleMd: 'Unternehmens-\nberatung',
+      description: 'Strategische Beratung für nachhaltigen Unternehmenserfolg.',
+      features: [
+        'Betriebswirtschaftliche Auswertungen und Controlling',
+        'Liquiditätsplanung und -steuerung',
+        'Kostenrechnung und Kalkulation',
+        'Digitale Prozessoptimierung',
+        'Unternehmensnachfolge'
+      ],
+      image: `${base}/images/services/Steuerberatung-Vermoegensaufbau.jpg`,
+      alt: 'Unternehmensberatung am Bodensee'
+    },
+    {
       id: 'buchhaltung',
       title: 'Digitale Buchhaltung',
       description: 'Effiziente Buchführung durch modernste digitale Prozesse.',
@@ -32,20 +47,6 @@
       ],
       image: `${base}/images/services/Rechnung-einscannen-digital.jpg`,
       alt: 'Digitale Buchhaltung und Belegerfassung'
-    },
-    {
-      id: 'jahresabschluss',
-      title: 'Jahresabschluss',
-      description: 'Professionelle Erstellung von Jahresabschlüssen für Unternehmen jeder Größe.',
-      features: [
-        'Erstellung von Jahresabschlüssen',
-        'E-Bilanz und digitale Übermittlung',
-        'Analyse der Geschäftszahlen',
-        'Entwicklung von Optimierungsstrategien',
-        'Beratung zu Bilanzierungsfragen'
-      ],
-      image: `${base}/images/services/Digitale-Steuerkanzlei-iPad.jpg`,
-      alt: 'Digitaler Jahresabschluss'
     },
     {
       id: 'lohnbuchhaltung',
@@ -62,19 +63,18 @@
       alt: 'Digitale Lohnbuchhaltung'
     },
     {
-      id: 'unternehmensberatung',
-      title: 'Unternehmensberatung',
-      titleMd: 'Unternehmens-\nberatung',
-      description: 'Strategische Beratung für nachhaltigen Unternehmenserfolg.',
+      id: 'jahresabschluss',
+      title: 'Jahresabschluss',
+      description: 'Professionelle Erstellung von Jahresabschlüssen für Unternehmen jeder Größe.',
       features: [
-        'Betriebswirtschaftliche Auswertungen und Controlling',
-        'Liquiditätsplanung und -steuerung',
-        'Kostenrechnung und Kalkulation',
-        'Digitale Prozessoptimierung',
-        'Unternehmensnachfolge'
+        'Erstellung von Jahresabschlüssen',
+        'E-Bilanz und digitale Übermittlung',
+        'Analyse der Geschäftszahlen',
+        'Entwicklung von Optimierungsstrategien',
+        'Beratung zu Bilanzierungsfragen'
       ],
-      image: `${base}/images/services/Steuerberatung-Vermögensaufbau.jpg`,
-      alt: 'Unternehmensberatung am Bodensee'
+      image: `${base}/images/services/Digitale-Steuerkanzlei-iPad.jpg`,
+      alt: 'Digitaler Jahresabschluss'
     },
     {
       id: 'existenzgruendung',

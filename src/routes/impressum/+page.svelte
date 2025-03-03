@@ -20,12 +20,12 @@
       class="prose prose-lg max-w-none"
       use:fadeIn={{ delay: 200 }}
     >
-        <p>STEUERKANZLEI Ill</p>
+        <p>Steuerkanzlei Ursula Ill</p>
         <p>Oberhof 21</p>
         <p>78351 B.-Ludwigshafen</p>
         <p>Tel.: +49 7773 920967</p>
         <p>Fax: +49 7773 920994</p>
-        <p>INFO(AT)STEUERKANZLEI-ILL.DE</p>
+        <p>info(at)steuerkanzlei-ill.de</p>
         <p>Inhalt des Onlineangebotes</p>
         <p>Der Betreiber/Autor übernimmt keinerlei Gewähr für die Aktualität, Korrektheit, Vollständigkeit oder Qualität der bereitgestellten Informationen. Haftungsansprüche gegen die Betreiber/Autoren, die sich auf Schäden materieller oder ideeller Art beziehen, welche durch die Nutzung oder Nichtnutzung der dargebotenen Informationen bzw. durch die Nutzung fehlerhafter und unvollständiger Informationen verursacht wurden sind grundsätzlich ausgeschlossen, sofern seitens des Betreibers/Autors kein nachweislich vorsätzliches oder grob fahrlässiges Verschulden vorliegt.</p>
         <p>Alle Angebote sind freibleibend und unverbindlich. Der Betreiber/Autor behält es sich ausdrücklich vor, Teile der Seiten oder das gesamte Angebot ohne gesonderte Ankündigung zu verändern, zu ergänzen, zu löschen oder die Veröffentlichung zeitweise oder endgültig einzustellen.</p>
