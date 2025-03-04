@@ -8,21 +8,13 @@ const config = {
     adapter: adapter({
       pages: 'build',
       assets: 'build',
-      fallback: 'index.html', // Ensures proper routing
+      fallback: 'index.html', // Ensures all routes are served properly
       precompress: false,
       strict: true
     }),
     paths: {
-      base: process.env.NODE_ENV === 'production' ? '/stk-ill-website' : ''
-    },
-    prerender: {
-      handleHttpError: ({ path, status, message }) => {
-        if (status === 404) {
-          console.warn(`Ignoring 404 error for path: ${path}`);
-          return;
-        }
-        throw new Error(message);
-      }
+      base: '',
+      assets: ''
     }
   }
 };
