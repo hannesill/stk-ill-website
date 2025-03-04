@@ -43,7 +43,7 @@
 >
   <div class="container mx-auto px-4">
     <nav class="flex items-center justify-between h-20">
-      <a href="/" class="flex items-center z-20">
+      <a href="{base}/" class="flex items-center z-20">
         <img src="{base}/logo.png" alt="Steuerkanzlei Ill Logo" class="h-16 p-3 w-auto">
       </a>
       
