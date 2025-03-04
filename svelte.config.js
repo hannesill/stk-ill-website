@@ -13,8 +13,7 @@ const config = {
       strict: true
     }),
     paths: {
-      base: process.env.VITE_BASE_PATH || '',
-      assets: process.env.VITE_BASE_PATH || ''
+      base: process.env.VITE_BASE_PATH || ''
     }
   }
 };
