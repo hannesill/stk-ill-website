@@ -6,9 +6,11 @@
   export let image: string;
   export let alt: string;
   export let imageLeft: boolean = true;
+  export let id: string;
 </script>
 
 <div 
+  id={id}
   class="bg-white rounded-lg shadow-md hover:shadow-xl transition-all duration-500 group max-w-full"
   use:fadeIn
 >

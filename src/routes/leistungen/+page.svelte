@@ -35,7 +35,7 @@
       alt: 'Unternehmensberatung am Bodensee'
     },
     {
-      id: 'buchhaltung',
+      id: 'digitale-buchhaltung',
       title: 'Digitale Buchhaltung',
       description: 'Effiziente Buchführung durch modernste digitale Prozesse.',
       features: [
@@ -122,6 +122,7 @@
           titleMd={service.titleMd}
           image={service.image}
           alt={service.alt}
+          id={service.id}
         >
           <p class="text-gray-600 mb-6 text-lg">
             {service.description}
