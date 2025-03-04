@@ -32,6 +32,12 @@ jobs:
           cache: 'npm'
           
       - run: npm ci
+      
+      # Set the base path for GitHub Pages deployment
+      - name: Set base path for GitHub Pages
+        run: |
+          echo "VITE_BASE_PATH=/stk-ill-website" >> $GITHUB_ENV
+          
       - run: npm run build
       
       - name: Upload artifact
