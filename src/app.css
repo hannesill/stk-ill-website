@@ -48,3 +48,8 @@ p, h1, h2, h3, h4, h5, h6, span, blockquote, ul, ol, li {
 a, button, [role="button"] {
   cursor: pointer;
 }
+
+/* Add this to your global CSS */
+h1, h2, h3, h4, h5, h6, [id] {
+  scroll-margin-top: 150px; /* Adjust this value based on your header height plus desired padding */
+}

@@ -17,7 +17,7 @@
     title: "Karriere bei uns",
     subtitle: "Werden Sie Teil unseres Teams in einer der modernsten Steuerkanzleien am Bodensee. Wir bieten Ihnen einen attraktiven Arbeitsplatz mit Seeblick und digitalen Prozessen.",
     buttonText: "Jetzt bewerben",
-    buttonLink: "#jobs",
+    buttonLink: `${base}/karriere#jobs`,
     underlineWidth: "w-[52%]"
   };
 
@@ -145,9 +145,10 @@
 </section>
 
 <!-- Jobs Section -->
-<section class="py-16 bg-gray-50" id="jobs">
+<section class="py-16 bg-gray-50">
   <div class="container mx-auto px-4">
-    <h2 
+    <h2
+      id="jobs"
       class="text-3xl font-bold text-center mb-4"
       use:fadeIn
     >

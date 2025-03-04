@@ -79,7 +79,7 @@
 
       <button 
         class="hidden lg:block bg-primary text-white px-6 py-2 rounded-lg hover:bg-primary-dark transition-colors"
-        on:click={() => window.location.href = `${base}/kontakt`}
+        on:click={() => window.location.href = `${base}/kontakt#erstgespraech`}
         >
         Termin vereinbaren
       </button>
@@ -105,7 +105,10 @@
             {/each}
             <button 
               class="bg-primary text-white px-6 py-2 rounded-lg hover:bg-primary-dark transition-colors mt-4"
-              on:click={() => isMenuOpen = false}
+              on:click={() => {
+                window.location.href = `${base}/kontakt#erstgespraech`;
+                isMenuOpen = false;
+              }}
             >
               Termin vereinbaren
             </button>

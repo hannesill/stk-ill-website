@@ -37,8 +37,9 @@
     <h2 
       class="text-3xl font-bold text-center mb-12"
       use:fadeIn
+      id="erstgespraech"
     >
-      Sprechen Sie uns an
+      Vereinbaren Sie jetzt ein unverbindliches Erstgespräch
     </h2>
     
     <div class="grid md:grid-cols-3 gap-8 max-w-5xl mx-auto">
