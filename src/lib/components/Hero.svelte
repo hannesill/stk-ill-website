@@ -57,8 +57,10 @@
       >
         <img 
           src={image.src} 
-          alt={image.alt} 
-          class="w-full h-full object-cover object-[center_40%] transition-transform duration-[20s] hover:scale-110"
+          alt={image.alt}
+          class="w-full h-full object-cover object-[center_40%] transition-transform duration-[20s] hover:scale-110 hero-image-{i}"
+          loading={i === 0 ? 'eager' : 'lazy'}
+          fetchpriority={i === 0 ? 'high' : 'auto'}
         >
       </div>
     {/each}
