@@ -1,8 +1,22 @@
 <script lang="ts">
-  import { fadeIn } from '$lib/actions/animate';
+  import Hero, { type HeroImage, type HeroContent } from "$lib/components/Hero.svelte";
   import CallToAction from '$lib/components/CallToAction.svelte';
   import BigImageCard from '$lib/components/BigImageCard.svelte';
   import { base } from '$app/paths';
+
+  const heroImages: HeroImage[] = [
+    {
+      src: `${base}/images/heros/hero-digital_bei_mandant.jpg`,
+      alt: "Digitale Steuerberatung direkt beim Mandanten"
+    }
+  ];
+
+  const heroContent: HeroContent = {
+    title: "Unsere Leistungen",
+    subtitle: "Als moderne Steuerkanzlei in der Region Stockach, Singen und Radolfzell bieten wir Ihnen digitale Lösungen für alle steuerlichen und betriebswirtschaftlichen Anforderungen.",
+    buttonText: "Jetzt unverbindliches Erstgespräch vereinbaren",
+    buttonLink: `${base}/kontakt#erstgespraech`
+  };
   
   const services = [
     {
@@ -99,22 +113,10 @@
   <meta name="keywords" content="Steuerberater Stockach, Steuerberater Singen, Steuerberater Radolfzell, Digitale Steuerberatung, Digitale Buchhaltung, Unternehmensberatung Bodensee" />
 </svelte:head>
 
+<Hero images={heroImages} content={heroContent} />
+
 <section class="py-16 bg-gray-50">
   <div class="container mx-auto px-4">
-    <h1 
-      class="text-4xl font-bold text-center mb-4"
-      use:fadeIn
-    >
-      Unsere Leistungen
-    </h1>
-    <p 
-      class="text-gray-600 text-center mb-16 max-w-3xl mx-auto text-lg"
-      use:fadeIn={{ delay: 200 }}
-    >
-      Als moderne Steuerkanzlei in der Region Stockach, Singen und Radolfzell bieten wir Ihnen 
-      digitale Lösungen für alle steuerlichen und betriebswirtschaftlichen Anforderungen.
-    </p>
-
     <div class="space-y-24">
       {#each services as service}
         <BigImageCard

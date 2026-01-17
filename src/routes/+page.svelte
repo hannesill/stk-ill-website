@@ -1,38 +1,31 @@
 <script lang="ts">
   import Hero, { type HeroImage, type HeroContent } from "$lib/components/Hero.svelte";
-  import Services from "$lib/components/Services.svelte";
   import Benefits from "$lib/components/Benefits.svelte";
+  import SocialProof from "$lib/components/SocialProof.svelte";
   import Testimonials from "$lib/components/Testimonials.svelte";
   import CallToAction from "$lib/components/CallToAction.svelte";
   import { browser } from '$app/environment';
   import { onMount } from 'svelte';
   import { base } from '$app/paths';
 
+  // Single hero image as per design spec (no slider)
   const heroImages: HeroImage[] = [
     {
       src: `${base}/images/heros/hero-digital_bei_mandant.jpg`,
-      alt: "Digitale Steuerberatung direkt beim Mandanten in der Fabrik"
-    },
-    {
-      src: `${base}/images/heros/hero-beratung.jpg`,
-      alt: "Steuerberatung in der Kanzlei am Bodensee"
-    },
-    {
-      src: `${base}/images/heros/hero-rechnung_digital_einscannen.jpg`,
-      alt: "Moderne Buchhaltung mit Einscannen der Rechnungen"
+      alt: "Digitale Steuerberatung direkt beim Mandanten"
     }
   ];
 
   const heroContent: HeroContent = {
-    title: "Digitale Steuerberatung",
-    subtitle: 'Für Personen & Unternehmen in <span class="font-bold">Stockach, Singen, Radolfzell und Umgebung</span>, die neue Wege gehen wollen: Weniger Kosten und mehr Zeit fürs Wesentliche durch digitale Prozesse.',
-    buttonText: "Jetzt unverbindliches Erstgespräch vereinbaren",
-    buttonLink: `${base}/kontakt#erstgespraech`,
-    underlineWidth: "w-[32%]"
+    title: "Monatliche Klarheit",
+    subtitle: 'Als Unternehmer erhalten Sie jeden Monat einen <span class="text-white font-semibold">Erfolgsreport</span> – nicht nur einmal im Jahr einen Jahresabschluss. Steuerlich und finanziell immer im Bild.',
+    buttonText: "Jetzt Erstgespräch vereinbaren",
+    buttonLink: `${base}/kontakt#erstgespraech`
   };
 
   onMount(() => {
     if (browser) {
+      // DATEV Marketing Script
       const script = document.createElement('script');
       script.src = 'https://www.datev-mymarketing.de/onlineMedia/code.js?ids=161458';
       script.async = true;
@@ -41,11 +34,27 @@
   });
 </script>
 
+<svelte:head>
+  <title>Digitale Steuerkanzlei am Bodensee | Steuerkanzlei Ill</title>
+  <meta name="description" content="Ihre digitale Steuerkanzlei am Bodensee. Monatliche Erfolgsreports statt jährlicher Überraschungen. Seit 2002 für erfolgreiche Unternehmer in Stockach, Singen, Radolfzell und deutschlandweit." />
+</svelte:head>
+
+<!-- Hero Section -->
 <Hero images={heroImages} content={heroContent} />
+
+<!-- Benefits Section -->
 <Benefits />
-<Services />
 
-<div id="mym-insert-here-161458" class="p-8 md:p-16 lg:p-16 md:mx-32 lg:mx-32"></div>
+<!-- Social Proof Section (Stats & Badges) -->
+<SocialProof />
 
+<!-- Testimonials Section -->
 <Testimonials />
+
+<!-- DATEV Widget -->
+<section class="section-padding-sm bg-cream-50">
+  <div id="mym-insert-here-161458" class="container-wide"></div>
+</section>
+
+<!-- Call to Action -->
 <CallToAction />

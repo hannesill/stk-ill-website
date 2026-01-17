@@ -2,54 +2,453 @@
 @import 'tailwindcss/components';
 @import 'tailwindcss/utilities';
 
-/* Smooth Scrolling */
+/* ============================================
+   FONTS - Instrument Serif + Satoshi
+   ============================================ */
+@import url('https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&display=swap');
+
+/* Satoshi from Fontshare CDN */
+@font-face {
+  font-family: 'Satoshi';
+  src: url('https://cdn.fontshare.com/wf/DEOGB32AJD5RZVBVJB6U4I5HXPKA2TFC/Z27B2LF7TFXQPQDQEQDQPOFMKWI6UKPZ/6VPSYQMZ4OHGWOWX35X3ZYP6PR3AAPWY.woff2') format('woff2');
+  font-weight: 300 900;
+  font-display: swap;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Satoshi';
+  src: url('https://cdn.fontshare.com/wf/AZ6RSJ3USDSNHVBFJ7QPJKWJLG7G3QZ5/NHNZXD7PH6NGZCPQ23LZYHVGHHXQ5QC3/NDFMXSB4WF7ZDQR6HCITPKBZGGTNCWMZ.woff2') format('woff2');
+  font-weight: 300 900;
+  font-display: swap;
+  font-style: italic;
+}
+
+/* ============================================
+   CSS CUSTOM PROPERTIES
+   ============================================ */
+:root {
+  /* Colors */
+  --color-primary: #E85A1B;
+  --color-primary-light: #FF8F5C;
+  --color-primary-dark: #D14A10;
+  --color-slate-900: #0F172A;
+  --color-slate-800: #1E293B;
+  --color-cream-50: #FEFDFB;
+  --color-cream-100: #FDFBF7;
+
+  /* Spacing */
+  --section-padding-y: clamp(4rem, 8vw, 8rem);
+  --container-padding-x: clamp(1rem, 4vw, 2rem);
+
+  /* Typography */
+  --font-display: 'Instrument Serif', Georgia, serif;
+  --font-body: 'Satoshi', system-ui, sans-serif;
+
+  /* Transitions */
+  --transition-fast: 150ms cubic-bezier(0.16, 1, 0.3, 1);
+  --transition-base: 300ms cubic-bezier(0.16, 1, 0.3, 1);
+  --transition-slow: 500ms cubic-bezier(0.16, 1, 0.3, 1);
+  --transition-slower: 800ms cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+/* ============================================
+   BASE STYLES
+   ============================================ */
 html {
   scroll-behavior: smooth;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-rendering: optimizeLegibility;
 }
 
-/* Custom Animations */
-@keyframes float {
-  0% { transform: translateY(0px); }
-  50% { transform: translateY(-10px); }
-  100% { transform: translateY(0px); }
+body {
+  font-family: var(--font-body);
+  font-weight: 400;
+  color: theme('colors.slate.700');
+  background-color: var(--color-cream-50);
+  line-height: 1.7;
 }
 
-.animate-float {
-  animation: float 6s ease-in-out infinite;
-}
-
-/* Hide scrollbar while keeping functionality */
+/* Elegant scrollbar */
 ::-webkit-scrollbar {
-  display: none;
+  width: 10px;
+  height: 10px;
 }
 
-/* For Firefox */
-* {
-  scrollbar-width: none;
+::-webkit-scrollbar-track {
+  background: theme('colors.cream.100');
 }
 
-/* Smooth transitions for all interactive elements */
-a, button {
-  transition: all 0.3s ease;
+::-webkit-scrollbar-thumb {
+  background: theme('colors.slate.300');
+  border-radius: 5px;
+  border: 2px solid theme('colors.cream.100');
 }
 
-/* Modern selection color */
+::-webkit-scrollbar-thumb:hover {
+  background: theme('colors.slate.400');
+}
+
+/* Premium selection color */
 ::selection {
-  background: theme('colors.secondary.DEFAULT');
+  background: theme('colors.primary.500');
   color: white;
 }
 
-/* Default cursor for text */
-p, h1, h2, h3, h4, h5, h6, span, blockquote, ul, ol, li {
-  cursor: default;
-}
-
-/* Keep pointer cursor for interactive elements */
+/* Smooth transitions for interactive elements */
 a, button, [role="button"] {
-  cursor: pointer;
+  transition: var(--transition-base);
 }
 
-/* Add this to your global CSS */
-h1, h2, h3, h4, h5, h6, [id] {
-  scroll-margin-top: 150px; /* Adjust this value based on your header height plus desired padding */
+/* Scroll margin for anchor links */
+[id] {
+  scroll-margin-top: 100px;
+}
+
+/* ============================================
+   TYPOGRAPHY
+   ============================================ */
+.font-display {
+  font-family: var(--font-display);
+}
+
+.font-body {
+  font-family: var(--font-body);
+}
+
+h1, h2, h3 {
+  font-family: var(--font-display);
+  color: theme('colors.slate.900');
+  font-weight: 400;
+}
+
+h4, h5, h6 {
+  font-family: var(--font-body);
+  font-weight: 600;
+  color: theme('colors.slate.800');
+}
+
+/* Display headings with italic styling option */
+.display-italic {
+  font-style: italic;
+}
+
+/* ============================================
+   LAYOUT UTILITIES
+   ============================================ */
+.section-padding {
+  padding-top: var(--section-padding-y);
+  padding-bottom: var(--section-padding-y);
+}
+
+.section-padding-sm {
+  padding-top: calc(var(--section-padding-y) * 0.6);
+  padding-bottom: calc(var(--section-padding-y) * 0.6);
+}
+
+.section-padding-lg {
+  padding-top: calc(var(--section-padding-y) * 1.25);
+  padding-bottom: calc(var(--section-padding-y) * 1.25);
+}
+
+.container-narrow {
+  max-width: 48rem;
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: var(--container-padding-x);
+  padding-right: var(--container-padding-x);
+}
+
+.container-wide {
+  max-width: 80rem;
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: var(--container-padding-x);
+  padding-right: var(--container-padding-x);
+}
+
+.container-full {
+  max-width: 90rem;
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: var(--container-padding-x);
+  padding-right: var(--container-padding-x);
+}
+
+/* ============================================
+   BUTTON STYLES
+   ============================================ */
+.btn {
+  @apply inline-flex items-center justify-center gap-2.5
+         font-medium rounded-xl
+         transition-all duration-300 ease-expo-out
+         active:scale-[0.98];
+}
+
+.btn-lg {
+  @apply px-8 py-4 text-base;
+}
+
+.btn-md {
+  @apply px-6 py-3 text-sm;
+}
+
+.btn-sm {
+  @apply px-4 py-2 text-sm;
+}
+
+.btn-primary {
+  @apply bg-primary-500 text-white
+         hover:bg-primary-600 hover:shadow-glow-orange;
+}
+
+.btn-secondary {
+  @apply bg-slate-900 text-white
+         hover:bg-slate-800 hover:shadow-soft-lg;
+}
+
+.btn-outline {
+  @apply border-2 border-slate-900 text-slate-900
+         hover:bg-slate-900 hover:text-white;
+}
+
+.btn-ghost {
+  @apply text-slate-600
+         hover:bg-slate-100 hover:text-slate-900;
+}
+
+.btn-white {
+  @apply bg-white text-slate-900
+         hover:bg-cream-100 hover:shadow-soft-lg;
+}
+
+/* ============================================
+   CARD STYLES
+   ============================================ */
+.card {
+  @apply bg-white rounded-2xl p-8
+         shadow-card transition-all duration-500 ease-expo-out;
+}
+
+.card-hover {
+  @apply hover:shadow-card-hover hover:-translate-y-1;
+}
+
+.card-bordered {
+  @apply bg-white rounded-2xl p-8
+         border border-slate-200/80
+         transition-all duration-500 ease-expo-out
+         hover:border-primary-200 hover:shadow-soft;
+}
+
+.card-glass {
+  @apply bg-white/70 backdrop-blur-xl rounded-2xl p-8
+         border border-white/50 shadow-soft;
+}
+
+/* ============================================
+   GRADIENT UTILITIES
+   ============================================ */
+.gradient-primary {
+  background: linear-gradient(135deg, theme('colors.primary.500') 0%, theme('colors.primary.600') 100%);
+}
+
+.gradient-dark {
+  background: linear-gradient(135deg, theme('colors.slate.800') 0%, theme('colors.slate.950') 100%);
+}
+
+.gradient-warm {
+  background: linear-gradient(180deg, theme('colors.cream.50') 0%, theme('colors.cream.200') 100%);
+}
+
+.gradient-hero {
+  background: linear-gradient(
+    135deg,
+    rgba(15, 23, 42, 0.95) 0%,
+    rgba(15, 23, 42, 0.85) 30%,
+    rgba(15, 23, 42, 0.6) 60%,
+    rgba(15, 23, 42, 0.4) 100%
+  );
+}
+
+.gradient-text-primary {
+  background: linear-gradient(135deg, theme('colors.primary.500') 0%, theme('colors.primary.700') 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+/* ============================================
+   ANIMATION UTILITIES
+   ============================================ */
+.animate-on-scroll {
+  opacity: 0;
+  transform: translateY(40px);
+  transition: opacity 0.8s cubic-bezier(0.16, 1, 0.3, 1),
+              transform 0.8s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.animate-on-scroll.is-visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Staggered delays */
+.delay-100 { transition-delay: 100ms; }
+.delay-150 { transition-delay: 150ms; }
+.delay-200 { transition-delay: 200ms; }
+.delay-300 { transition-delay: 300ms; }
+.delay-400 { transition-delay: 400ms; }
+.delay-500 { transition-delay: 500ms; }
+.delay-600 { transition-delay: 600ms; }
+.delay-700 { transition-delay: 700ms; }
+.delay-800 { transition-delay: 800ms; }
+
+/* ============================================
+   DECORATIVE ELEMENTS
+   ============================================ */
+.line-accent {
+  position: relative;
+  display: inline-block;
+}
+
+.line-accent::after {
+  content: '';
+  position: absolute;
+  bottom: 0.15em;
+  left: 0;
+  width: 100%;
+  height: 0.35em;
+  background: theme('colors.primary.200');
+  z-index: -1;
+  border-radius: 2px;
+}
+
+.badge {
+  @apply inline-flex items-center gap-2 px-4 py-2
+         text-label-md uppercase tracking-wider
+         rounded-full;
+}
+
+.badge-primary {
+  @apply bg-primary-100 text-primary-700;
+}
+
+.badge-dark {
+  @apply bg-slate-900 text-white;
+}
+
+.badge-outline {
+  @apply border border-slate-300 text-slate-600;
+}
+
+/* Noise overlay */
+.bg-noise::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noiseFilter'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.65' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noiseFilter)'/%3E%3C/svg%3E");
+  opacity: 0.025;
+  pointer-events: none;
+  z-index: 1;
+}
+
+/* Grid pattern overlay */
+.bg-grid::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background-image:
+    linear-gradient(rgba(255,255,255,0.05) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(255,255,255,0.05) 1px, transparent 1px);
+  background-size: 50px 50px;
+  pointer-events: none;
+}
+
+/* ============================================
+   HOVER EFFECTS
+   ============================================ */
+.hover-lift {
+  @apply transition-all duration-500 ease-expo-out
+         hover:-translate-y-2 hover:shadow-soft-lg;
+}
+
+.hover-scale {
+  @apply transition-transform duration-500 ease-expo-out
+         hover:scale-[1.02];
+}
+
+.hover-glow {
+  @apply transition-shadow duration-500 ease-expo-out
+         hover:shadow-glow-orange;
+}
+
+/* Link with underline animation */
+.link-underline {
+  position: relative;
+  display: inline-block;
+}
+
+.link-underline::after {
+  content: '';
+  position: absolute;
+  bottom: -2px;
+  left: 0;
+  width: 0;
+  height: 2px;
+  background: currentColor;
+  transition: width 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.link-underline:hover::after {
+  width: 100%;
+}
+
+/* ============================================
+   FOCUS STATES
+   ============================================ */
+:focus-visible {
+  @apply outline-none ring-2 ring-primary-500 ring-offset-2 ring-offset-cream-50;
+}
+
+/* ============================================
+   RESPONSIVE UTILITIES
+   ============================================ */
+@media (max-width: 768px) {
+  .mobile-full {
+    width: 100%;
+  }
+
+  .mobile-center {
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .mobile-stack {
+    flex-direction: column;
+  }
+}
+
+/* ============================================
+   PRINT STYLES
+   ============================================ */
+@media print {
+  .no-print {
+    display: none !important;
+  }
+}
+
+/* ============================================
+   REDUCED MOTION
+   ============================================ */
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
 }
