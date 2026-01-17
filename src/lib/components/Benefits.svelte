@@ -153,7 +153,7 @@
 
     <!-- Bottom CTA -->
     <div
-      class="mt-16 lg:mt-20 flex flex-col sm:flex-row items-center justify-center gap-4 sm:gap-6 transition-all duration-700 ease-expo-out"
+      class="mt-16 lg:mt-20 flex flex-col md:flex-row items-center justify-center gap-4 md:gap-6 transition-all duration-700 ease-expo-out"
       style="transition-delay: 700ms"
       class:opacity-0={!isVisible}
       class:translate-y-8={!isVisible}
@@ -165,10 +165,10 @@
       </p>
       <a
         href="{base}/kontakt#erstgespraech"
-        class="group inline-flex items-center gap-2 text-primary-600 font-semibold hover:text-primary-700 transition-colors link-underline"
+        class="group inline-flex items-center gap-2 text-primary-600 font-semibold hover:text-primary-700 transition-colors"
       >
-        Kostenfreies Erstgespräch
-        <svg class="w-4 h-4 transition-transform duration-300 group-hover:translate-x-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+        <span class="link-underline">Kostenfreies Erstgespräch</span>
+        <svg class="w-4 h-4 flex-shrink-0 transition-transform duration-300 group-hover:translate-x-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
           <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M17 8l4 4m0 0l-4 4m4-4H3" />
         </svg>
       </a>

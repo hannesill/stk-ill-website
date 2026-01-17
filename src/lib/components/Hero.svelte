@@ -6,6 +6,7 @@
 
   export interface HeroContent {
     title: string;
+    highlight?: string;
     subtitle: string;
     buttonText?: string;
     buttonLink?: string;
@@ -130,15 +131,17 @@
         class:translate-y-0={isVisible}
       >
         <span class="block">{content.title}</span>
-        <span class="relative inline-block">
-          <span class="text-primary-400">statt Jahres&shy;abschluss</span>
-          <!-- Animated underline -->
-          <span
-            class="absolute -bottom-2 left-0 h-3 bg-primary-500/40 -z-10 rounded-sm transition-all duration-1000 ease-expo-out delay-700"
-            class:w-0={!isVisible}
-            class:w-full={isVisible}
-          ></span>
-        </span>
+        {#if content.highlight}
+          <span class="relative inline-block">
+            <span class="text-primary-400">{@html content.highlight}</span>
+            <!-- Animated underline -->
+            <span
+              class="absolute -bottom-2 left-0 h-3 bg-primary-500/40 -z-10 rounded-sm transition-all duration-1000 ease-expo-out delay-700"
+              class:w-0={!isVisible}
+              class:w-full={isVisible}
+            ></span>
+          </span>
+        {/if}
       </h1>
 
       <!-- Subheadline -->

@@ -12,9 +12,9 @@
   ];
 
   const heroContent: HeroContent = {
-    title: "Kontakt",
-    subtitle: "Wir freuen uns darauf, Sie kennenzulernen. Kontaktieren Sie uns für ein unverbindliches Erstgespräch.",
-    underlineWidth: "w-[100%]"
+    title: "Sprechen wir",
+    highlight: "über Ihre Ziele",
+    subtitle: "Wir freuen uns darauf, Sie kennenzulernen. Kontaktieren Sie uns für ein unverbindliches Erstgespräch."
   };
 
   let mapsLoaded = false;

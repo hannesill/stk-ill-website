@@ -12,7 +12,8 @@
   ];
 
   const heroContent: HeroContent = {
-    title: "Unsere Leistungen",
+    title: "Umfassende Beratung",
+    highlight: "für Ihren Erfolg",
     subtitle: "Als moderne Steuerkanzlei in der Region Stockach, Singen und Radolfzell bieten wir Ihnen digitale Lösungen für alle steuerlichen und betriebswirtschaftlichen Anforderungen.",
     buttonText: "Jetzt unverbindliches Erstgespräch vereinbaren",
     buttonLink: `${base}/kontakt#erstgespraech`

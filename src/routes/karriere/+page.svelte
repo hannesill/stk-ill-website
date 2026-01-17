@@ -14,11 +14,11 @@
   ];
 
   const heroContent: HeroContent = {
-    title: "Karriere bei uns",
+    title: "Karriere",
+    highlight: "mit bester Aussicht",
     subtitle: "Werden Sie Teil unseres Teams in einer der modernsten Steuerkanzleien am Bodensee. Wir bieten Ihnen einen attraktiven Arbeitsplatz mit Seeblick und digitalen Prozessen.",
     buttonText: "Jetzt bewerben",
-    buttonLink: `${base}/karriere#jobs`,
-    underlineWidth: "w-[52%]"
+    buttonLink: `${base}/karriere#jobs`
   };
 
   const benefits = [

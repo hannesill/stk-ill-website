@@ -13,11 +13,11 @@
   ];
 
   const heroContent: HeroContent = {
-    title: "Über uns",
+    title: "Persönlich & digital",
+    highlight: "an Ihrer Seite",
     subtitle: 'Wir sind eine digitale Steuerberatung in Stockach, Singen und Radolfzell, die Ihnen neue Wege in der Steuerberatung und Buchhaltung eröffnet.',
     buttonText: "Jetzt unverbindliches Erstgespräch vereinbaren",
-    buttonLink: `${base}/kontakt#erstgespraech`,
-    underlineWidth: "w-[55%]"
+    buttonLink: `${base}/kontakt#erstgespraech`
   };
 </script>
 
