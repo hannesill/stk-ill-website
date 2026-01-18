@@ -19,10 +19,10 @@
 
   const defaultContent: CTAContent = {
     title: "Bereit für monatliche Klarheit?",
-    description: "Vereinbaren Sie ein kostenloses Erstgespräch und erfahren Sie, wie wir Ihre steuerlichen Angelegenheiten auf das nächste Level bringen.",
+    description: "Sichern Sie sich Ihr kostenloses Erstgespräch.",
     primaryButton: {
-      text: "Erstgespräch vereinbaren",
-      href: `${base}/kontakt#erstgespraech`
+      text: "Termin sichern",
+      href: "https://cal.com/forms/a488cd95-33a4-491c-bf5e-1f4212ebb7df"
     },
     secondaryButton: {
       text: "07773 920967",
@@ -174,7 +174,7 @@
             class:opacity-100={isVisible}
             class:translate-y-0={isVisible}
           >
-            Kostenfreies Erstgespräch ohne Verpflichtung
+            Kostenlos & unverbindlich – Antwort innerhalb von 24 Stunden
           </p>
         </div>
       </div>

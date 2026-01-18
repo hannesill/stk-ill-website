@@ -5,7 +5,104 @@
 		<meta name="viewport" content="width=device-width, initial-scale=1" />
 		<link rel="canonical" href="https://www.steuerkanzlei-ill.de" />
 		<link rel="icon" type="image/png" href="%sveltekit.assets%/favicon.png">
-		
+
+		<!-- Schema.org LocalBusiness structured data -->
+		<script type="application/ld+json">
+		{
+			"@context": "https://schema.org",
+			"@type": "AccountingService",
+			"@id": "https://www.steuerkanzlei-ill.de",
+			"name": "Steuerkanzlei Ill",
+			"alternateName": "Steuerkanzlei Ill - Digitale Steuerberatung am Bodensee",
+			"description": "Digitale Steuerkanzlei am Bodensee. Monatliche Erfolgsreports statt jährlicher Überraschungen. Spezialisiert auf Unternehmer und KMUs.",
+			"url": "https://www.steuerkanzlei-ill.de",
+			"logo": "https://www.steuerkanzlei-ill.de/logo.png",
+			"image": "https://www.steuerkanzlei-ill.de/images/Steuerkanzlei-Bodensee-Team.jpg",
+			"telephone": "+49 7773 920967",
+			"email": "info@steuerkanzlei-ill.de",
+			"foundingDate": "2002",
+			"priceRange": "€€€",
+			"address": {
+				"@type": "PostalAddress",
+				"streetAddress": "Oberhof 21",
+				"addressLocality": "Bodman-Ludwigshafen",
+				"postalCode": "78351",
+				"addressRegion": "Baden-Württemberg",
+				"addressCountry": "DE"
+			},
+			"geo": {
+				"@type": "GeoCoordinates",
+				"latitude": "47.8089",
+				"longitude": "9.0581"
+			},
+			"openingHoursSpecification": [
+				{
+					"@type": "OpeningHoursSpecification",
+					"dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"],
+					"opens": "08:00",
+					"closes": "17:00"
+				}
+			],
+			"areaServed": [
+				{
+					"@type": "City",
+					"name": "Stockach"
+				},
+				{
+					"@type": "City",
+					"name": "Singen"
+				},
+				{
+					"@type": "City",
+					"name": "Radolfzell"
+				},
+				{
+					"@type": "City",
+					"name": "Konstanz"
+				},
+				{
+					"@type": "AdministrativeArea",
+					"name": "Bodensee"
+				},
+				{
+					"@type": "Country",
+					"name": "Deutschland"
+				}
+			],
+			"sameAs": [],
+			"hasOfferCatalog": {
+				"@type": "OfferCatalog",
+				"name": "Steuerberatung Leistungen",
+				"itemListElement": [
+					{
+						"@type": "Offer",
+						"itemOffered": {
+							"@type": "Service",
+							"name": "Monatliche Erfolgsreports",
+							"description": "Monatliche Auswertungen statt jährlicher Überraschungen"
+						}
+					},
+					{
+						"@type": "Offer",
+						"itemOffered": {
+							"@type": "Service",
+							"name": "Digitale Buchhaltung",
+							"description": "Moderne, papierlose Buchführung mit DATEV"
+						}
+					},
+					{
+						"@type": "Offer",
+						"itemOffered": {
+							"@type": "Service",
+							"name": "Steuerberatung für Unternehmer",
+							"description": "Persönliche Steuerberatung für KMU und Einzelunternehmer"
+						}
+					}
+				]
+			}
+		}
+		</script>
+
 		<!-- Inline critical CSS -->
 		<style>
 			/* Apply a low-quality background color or gradient that matches your hero image */
@@ -15,12 +112,12 @@
 				background-image: linear-gradient(to bottom, #e0e0e0, #f8f8f8);
 			}
 		</style>
-		
+
 		<!-- Preload common hero images -->
 		<link rel="preload" as="image" href="%sveltekit.assets%/images/heros/hero-digital_bei_mandant.jpg" fetchpriority="high" />
 		<link rel="preload" as="image" href="%sveltekit.assets%/images/Steuerkanzlei-Ill-Partner-Anwalt.jpg" fetchpriority="high" />
 		<link rel="preload" as="image" href="%sveltekit.assets%/images/Steuerkanzlei-Bodensee-Team.jpg" fetchpriority="high" />
-		
+
 		%sveltekit.head%
 	</head>
 	<body data-sveltekit-preload-data="hover">

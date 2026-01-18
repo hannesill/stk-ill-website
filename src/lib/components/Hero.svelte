@@ -10,6 +10,7 @@
     subtitle: string;
     buttonText?: string;
     buttonLink?: string;
+    scrollTarget?: string;
   }
 </script>
 
@@ -231,21 +232,23 @@
   </div>
 
   <!-- Scroll Indicator -->
-  <div
-    class="absolute bottom-4 left-1/2 -translate-x-1/2 z-10 transition-all duration-800 delay-800 hidden md:block"
-    class:opacity-0={!isVisible}
-    class:opacity-100={isVisible}
-  >
-    <a
-      href="#vorteile"
-      class="flex flex-col items-center gap-3 text-white/50 hover:text-white/80 transition-colors duration-300 group"
+  {#if content.scrollTarget}
+    <div
+      class="absolute bottom-4 left-1/2 -translate-x-1/2 z-10 transition-all duration-800 delay-800 hidden md:block"
+      class:opacity-0={!isVisible}
+      class:opacity-100={isVisible}
     >
-      <span class="text-xs uppercase font-medium">Mehr erfahren</span>
-      <div class="relative w-4 h-6 rounded-full border border-current flex justify-center overflow-hidden">
-        <div class="w-1 h-2 bg-current rounded-full mt-2 animate-bounce"></div>
-      </div>
-    </a>
-  </div>
+      <a
+        href={content.scrollTarget}
+        class="flex flex-col items-center gap-3 text-white/50 hover:text-white/80 transition-colors duration-300 group"
+      >
+        <span class="text-xs uppercase font-medium">Mehr erfahren</span>
+        <div class="relative w-4 h-6 rounded-full border border-current flex justify-center overflow-hidden">
+          <div class="w-1 h-2 bg-current rounded-full mt-2 animate-bounce"></div>
+        </div>
+      </a>
+    </div>
+  {/if}
 </section>
 
 <style>

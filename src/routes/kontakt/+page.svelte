@@ -34,12 +34,12 @@
 
 <section class="py-16 bg-white">
   <div class="container mx-auto px-4">
-    <h2 
+    <h2
       class="text-3xl font-bold text-center mb-12"
       use:fadeIn
       id="erstgespraech"
     >
-      Vereinbaren Sie jetzt ein unverbindliches Erstgespräch
+      Sichern Sie sich Ihr kostenloses Erstgespräch
     </h2>
     
     <div class="grid md:grid-cols-3 gap-8 max-w-5xl mx-auto">

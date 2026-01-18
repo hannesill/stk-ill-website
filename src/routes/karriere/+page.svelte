@@ -118,7 +118,7 @@
 <!-- Benefits Section -->
 <section class="py-16 bg-white">
   <div class="container mx-auto px-4">
-    <h2 
+    <h2
       class="text-3xl font-bold text-center mb-4"
       use:fadeIn
     >

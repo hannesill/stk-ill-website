@@ -122,13 +122,13 @@
 
       <!-- Desktop CTA Button -->
       <a
-        href="{base}/kontakt#erstgespraech"
+        href="https://cal.com/forms/a488cd95-33a4-491c-bf5e-1f4212ebb7df"
         class="hidden lg:inline-flex items-center gap-2 px-5 py-2.5 rounded-xl font-semibold text-sm
                bg-primary-500 text-white hover:bg-primary-600 hover:shadow-glow-orange
                transition-all duration-300 ease-expo-out hover:scale-[1.02] active:scale-[0.98] shrink-0"
         style="animation: navItemFade 0.5s cubic-bezier(0.16, 1, 0.3, 1) 500ms both;"
       >
-        <span>Termin vereinbaren</span>
+        <span>Termin sichern</span>
         <svg class="w-4 h-4 transition-transform duration-300 group-hover:translate-x-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
           <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M9 5l7 7-7 7" />
         </svg>
@@ -206,13 +206,13 @@
         <!-- CTA Button -->
         <div in:fly={{ y: 20, delay: 320, duration: 300, easing: cubicOut }}>
           <a
-            href="{base}/kontakt#erstgespraech"
+            href="https://cal.com/forms/a488cd95-33a4-491c-bf5e-1f4212ebb7df"
             class="flex items-center justify-center gap-3 w-full bg-primary-500 text-white
                    px-6 py-4 rounded-xl font-semibold text-base hover:bg-primary-600
                    transition-all duration-300 shadow-glow-orange"
             on:click={closeMenu}
           >
-            Termin vereinbaren
+            Termin sichern
             <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
               <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3" />
             </svg>

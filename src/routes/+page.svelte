@@ -20,8 +20,9 @@
     title: "Monatliche Klarheit",
     highlight: "statt Über&shy;raschungen",
     subtitle: 'Als Unternehmer erhalten Sie jeden Monat einen <span class="text-white font-semibold">Erfolgsreport</span> – nicht nur einmal im Jahr einen Jahresabschluss. Steuerlich und finanziell immer im Bild.',
-    buttonText: "Jetzt Erstgespräch vereinbaren",
-    buttonLink: `${base}/kontakt#erstgespraech`
+    buttonText: "Kostenlose Erstberatung sichern",
+    buttonLink: `${base}/kontakt#erstgespraech`,
+    scrollTarget: "#vorteile"
   };
 
   onMount(() => {

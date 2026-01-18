@@ -159,7 +159,7 @@
           </div>
 
           <!-- Testimonial Cards Container -->
-          <div class="relative min-h-[420px] lg:min-h-[380px]">
+          <div class="relative min-h-[560px] md:min-h-[520px] lg:min-h-[480px] xl:min-h-[420px]">
             {#each testimonials as testimonial, i}
               <div
                 class="absolute inset-0 transition-all duration-600 ease-expo-out"
@@ -171,7 +171,7 @@
                 class:scale-[0.98]={activeIndex !== i}
                 class:pointer-events-none={activeIndex !== i}
               >
-                <div class="relative bg-white rounded-2xl lg:rounded-3xl p-8 lg:p-12 shadow-card border border-slate-100 overflow-hidden h-full">
+                <div class="relative bg-white rounded-2xl lg:rounded-3xl p-8 lg:p-12 shadow-card border border-slate-100 overflow-hidden">
                   <!-- Subtle gradient accent -->
                   <div class="absolute top-0 right-0 w-1/3 h-full bg-gradient-to-l from-primary-50/40 to-transparent pointer-events-none"></div>
 
@@ -191,7 +191,7 @@
                     </blockquote>
 
                     <!-- Highlight -->
-                    <p class="text-primary-600 font-semibold text-lg mb-10">
+                    <p class="text-primary-600 font-semibold text-lg mb-8">
                       {testimonial.highlight}
                     </p>
 
