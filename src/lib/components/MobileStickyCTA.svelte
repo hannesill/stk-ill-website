@@ -4,36 +4,47 @@
   import { base } from '$app/paths';
 
   let isVisible = false;
-  let isNearFooter = false;
+  let isFooterVisible = false;
 
   function handleScroll() {
     const scrollY = window.scrollY;
-    const windowHeight = window.innerHeight;
-    const documentHeight = document.documentElement.scrollHeight;
-
     // Show after scrolling 300px
     isVisible = scrollY > 300;
-
-    // Hide when near footer (last 200px)
-    isNearFooter = scrollY + windowHeight > documentHeight - 200;
   }
 
   onMount(() => {
     window.addEventListener('scroll', handleScroll, { passive: true });
-    return () => window.removeEventListener('scroll', handleScroll);
+
+    // Observe footer visibility
+    const footer = document.querySelector('footer');
+    let observer: IntersectionObserver | null = null;
+
+    if (footer) {
+      observer = new IntersectionObserver(
+        (entries) => {
+          isFooterVisible = entries[0].isIntersecting;
+        },
+        { threshold: 0 }
+      );
+      observer.observe(footer);
+    }
+
+    return () => {
+      window.removeEventListener('scroll', handleScroll);
+      if (observer && footer) {
+        observer.unobserve(footer);
+      }
+    };
   });
 </script>
 
-{#if isVisible && !isNearFooter}
+{#if isVisible && !isFooterVisible}
   <div
     class="fixed bottom-0 left-0 right-0 z-40 lg:hidden"
     transition:fly={{ y: 100, duration: 300 }}
   >
-    <!-- Gradient fade at top -->
-    <div class="absolute -top-6 left-0 right-0 h-6 bg-gradient-to-t from-white to-transparent pointer-events-none"></div>
-
     <!-- CTA Container -->
-    <div class="bg-white border-t border-slate-200 shadow-soft-lg px-4 py-3 safe-area-bottom">
+    <div class="bg-white border-t border-slate-200 shadow-md px-4 py-3 safe-area-bottom">
       <div class="flex gap-3 max-w-lg mx-auto">
         <!-- Call Button -->
         <a
