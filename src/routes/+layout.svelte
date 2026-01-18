@@ -2,7 +2,6 @@
 	import "../app.css";
 	import Header from "$lib/components/Header.svelte";
 	import Footer from "$lib/components/Footer.svelte";
-	import ExitIntentPopup from "$lib/components/ExitIntentPopup.svelte";
 	import MobileStickyCTA from "$lib/components/MobileStickyCTA.svelte";
 </script>
 
@@ -55,9 +54,6 @@
 
 <!-- Mobile Sticky CTA -->
 <MobileStickyCTA />
-
-<!-- Exit Intent Popup for Lead Recovery -->
-<ExitIntentPopup />
 
 <style>
 	:global(html) {
