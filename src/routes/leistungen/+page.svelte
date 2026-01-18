@@ -23,12 +23,12 @@
     {
       id: 'steuerberatung',
       title: 'Digitale Steuerberatung',
-      description: 'Moderne Steuerberatung mit digitalen Prozessen für maximale Effizienz.',
+      description: 'Moderne Steuerberatung mit monatlichen Erfolgsreports. So wissen Sie jeden Monat, wo Sie stehen – steuerlich und finanziell.',
       features: [
+        'Monatliche Erfolgsreports statt jährlicher Überraschungen',
         'Digitale Steuererklärungen für Privatpersonen und Unternehmen',
         'Steuerliche Gestaltungsberatung',
         'Vertretung gegenüber Finanzbehörden',
-        'Digitale Kommunikation und Dokumentenverwaltung',
         'Steueroptimierung durch vorausschauende Planung'
       ],
       image: `${base}/images/services/Steuerberatung-Bodensee.jpg`,

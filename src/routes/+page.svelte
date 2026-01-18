@@ -1,6 +1,7 @@
 <script lang="ts">
   import Hero, { type HeroImage, type HeroContent } from "$lib/components/Hero.svelte";
   import Benefits from "$lib/components/Benefits.svelte";
+  import ServicesPreview from "$lib/components/ServicesPreview.svelte";
   import SocialProof from "$lib/components/SocialProof.svelte";
   import Testimonials from "$lib/components/Testimonials.svelte";
   import CallToAction from "$lib/components/CallToAction.svelte";
@@ -46,6 +47,9 @@
 
 <!-- Benefits Section -->
 <Benefits />
+
+<!-- Services Preview Section -->
+<ServicesPreview />
 
 <!-- Social Proof Section (Stats & Badges) -->
 <SocialProof />
