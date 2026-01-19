@@ -5,7 +5,7 @@
   const stats = [
     { value: "2002", prefix: "Seit", suffix: "", description: "am Bodensee" },
     { value: "50", prefix: "Max.", suffix: "", description: "Unternehmen" },
-    { value: "3", prefix: "", suffix: "", description: "Expertinnen" },
+    { value: "3", prefix: "", suffix: "", description: "Experten" },
     { value: "1", prefix: "", suffix: "", description: "Ansprechpartnerin" }
   ];
 

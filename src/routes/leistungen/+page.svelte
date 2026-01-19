@@ -6,8 +6,8 @@
 
   const heroImages: HeroImage[] = [
     {
-      src: `${base}/images/heros/hero-digital_bei_mandant.jpg`,
-      alt: "Digitale Steuerberatung direkt beim Mandanten"
+      src: `${base}/images/Steuerkanzlei-Bodensee-Bankengespraech.jpg`,
+      alt: "Steuerberatung und Bankengespräch am Bodensee"
     }
   ];
 
